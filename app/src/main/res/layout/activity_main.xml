@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TotalPensao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorApp"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/Row_linha2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTable"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/Sal_titulo"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:text="Salario Bruto"
+            android:textColor="@color/colorPrimary"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editSalatioBase"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:ems="8"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linha2"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/colorTable"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:onClick="CalcInss"
+            android:text="@string/calc_inss"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/textInss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="8"
+            android:hint="@string/taxaInss"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"
+            tools:ignore="LabelFor"
+            android:enabled="false"
+            android:textColor="@color/texto"/>
+
+
+        <EditText
+            android:id="@+id/inssResult"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="8"
+            android:hint="Salário/INSS"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"
+            tools:ignore="LabelFor"
+            android:enabled="false"
+            android:textColor="@color/texto"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Row_linha3"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorTable"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/calcularpensao"
+            android:layout_width="123dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:onClick="calcTotpensão"
+            android:text="@string/calc_pens_o"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/editPensao"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="8"
+            android:hint="@string/valor_da_pensao"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/editDependentes"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="8"
+            android:hint="@string/qtd_dependentes"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Row_linha4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTable"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Pensao_titulo"
+            android:layout_width="199dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Total Pensão Alimenticia"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+        <EditText
+            android:id="@+id/textTotalPensao"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"
+            tools:ignore="LabelFor"
+            android:enabled="false"
+            android:textColor="@color/texto"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Row_linha5"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorTable"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:onClick="CalcIrff"
+            android:text="@string/calc_irpf"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/editSalResilt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="8"
+            android:hint="@string/resultado_salarial_inss"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/editQtdDep"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:ems="8"
+            android:hint="@string/qtd_dependentes"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Row_linha6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTable"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/TituloResultadoIPRF"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Total IRPF"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/TextIrff"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:ems="10"
+            android:hint="@string/taxaIrpf"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"
+            tools:ignore="LabelFor"
+            android:enabled="false"
+            android:textColor="@color/texto"/>
+
+        <EditText
+            android:id="@+id/irffResult"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="Salário/IPRF"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"
+            tools:ignore="LabelFor"
+            android:enabled="false"
+            android:textColor="@color/texto"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Plano"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorTable"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textPlano"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="@string/outros_desc"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editPlano"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="@string/valor_plano_de_sa_de"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editPassagem"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:ems="8"
+            android:hint="@string/valor_passagem"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/calculoSal"
+        android:layout_width="412dp"
+        android:layout_height="56dp"
+        android:background="@color/colorTable"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonCalc"
+            android:layout_width="125dp"
+            android:layout_height="38dp"
+            android:layout_margin="10dp"
+            android:onClick="calcularTotalLiq"
+            android:text="@string/total_liquido"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/SalarioLiquido"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"
+            tools:ignore="LabelFor"
+            android:enabled="false"
+            android:textColor="@color/texto"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Row_linha7"
+        android:layout_width="412dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTable"
+        android:orientation="horizontal">
+
+
+
+
+        <Button
+            android:id="@+id/btnSalvarArq"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/salvar_arquivo"
+            android:textSize="12sp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btnLerArq"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:onClick="LerRelatorio"
+            android:text="@string/abrir_arquivo"
+            android:textSize="12sp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/limpar"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:onClick="LimparResultados"
+            android:text="@string/limpar"
+            android:textSize="12sp"
+            tools:ignore="ButtonStyle" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/conteudo"
+        android:layout_width="335dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@color/colorTable"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:enabled="false"
+        android:textColor="@color/texto"
+        android:inputType="textMultiLine"
+        tools:ignore="LabelFor" />
+
+</LinearLayout>

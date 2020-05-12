@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Calculo Salario Liquido_TP7</string>
+    <string name="taxaInss">Taxa</string>
+    <string name="taxaIrpf">Taxa</string>
+    <string name="abrir_arquivo">Abrir arquivo</string>
+    <string name="calc_inss">Calc. INSS</string>
+    <string name="irff">IRPF</string>
+    <string name="limpar">Limpar</string>
+    <string name="resultado_salarial_inss">Insira Salário/INSS</string>
+    <string name="qtd_dependts">Nº dependentes</string>
+    <string name="valor_passagem">R$: passagem</string>
+    <string name="result_salario">R$: Salário</string>
+    <string name="r_salario">Salário/IRPF</string>
+    <string name="valor_plano_de_sa_de">R$: plano saúde</string>
+    <string name="salvar_arquivo">Salvar arquivo</string>
+    <string name="total_liquido">Total Liquido</string>
+    <string name="qtd_dependentes">Nº dependentes</string>
+    <string name="outros_desc">Outros Desc.</string>
+    <string name="inss">INSS</string>
+    <string name="valor_da_pensao">R$: pensão</string>
+    <string name="calc_irpf">Calc IRPF</string>
+    <string name="salario_liquido_total">Salário Líquido total:</string>
+    <string name="pens_o_aliment_cia">Pensão Alimentícia</string>
+    <string name="calc_pens_o">Calc. pensão</string>
+    <string name="total_a_pagar">Total a pagar :</string>
+    <string name="imposto_irrf">Imposto IRPF</string>
+</resources>
